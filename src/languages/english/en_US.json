@@ -1,0 +1,18 @@
+{
+  "common": {
+    "changeLanguage": "Change language"
+  },
+  "languages": {
+    "en_US": "English",
+    "es_LA": "Spanish"
+  },
+  "mainMenu": {
+    "bioPage": "About Jorius",
+    "contactPage": "Whisper me something",
+    "githubPage": "GitHub Repositories",
+    "homePage": "Cape Canaveral",
+    "npmPage": "NPM Packages",
+    "settingsPage": "Change it some stuff",
+    "stackOverflowPage": "Stack Overflow Profile"
+  }
+}
