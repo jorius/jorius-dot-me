@@ -1,0 +1,18 @@
+{
+  "common": {
+    "changeLanguage": "Cambiar idioma"
+  },
+  "languages": {
+    "en_US": "Inglés",
+    "es_LA": "Español"
+  },
+  "mainMenu": {
+    "bioPage": "Acerca de Jorius",
+    "contactPage": "Susurrame algo",
+    "githubPage": "GitHub repositorios",
+    "homePage": "Cavo cañaveral",
+    "npmPage": "NPM paquetes",
+    "settingsPage": "Cambia algunas cosas",
+    "stackOverflowPage": "Stack Overflow perfil"
+  }
+}
