@@ -10,7 +10,11 @@ export const useStyles = makeStyles((theme) => ({
     color: theme.palette.custom.white.light,
     height: '100vh',
     marginLeft: dimensions.mainMenu.width,
+    overflow: 'auto',
     paddingTop: 25,
     width: `calc(100% - ${dimensions.mainMenu.width}px)`,
-  }
+  },
+  githubRepoContainer: {
+    padding: 25,
+  },
 }));

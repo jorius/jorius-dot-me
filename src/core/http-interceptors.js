@@ -1,9 +1,6 @@
 // @packages
 import axios from 'axios';
 
-// @utils
-import { snakeCaseToCamelCase } from '../utils';
-
 export const addRequestInterceptors = () => {
   axios.interceptors.request.use(
     (request) => request,
@@ -13,7 +10,7 @@ export const addRequestInterceptors = () => {
 
 export const addResponseInterceptors = () => {
   axios.interceptors.response.use(
-    (response) => snakeCaseToCamelCase(response.data),
+    (response) => response.data,
     (error) => Promise.reject(error)
   );
 };

@@ -5,19 +5,19 @@ import { combineReducers } from 'redux';
 import { configuration } from '../../configuration';
 
 // @actions
-import { GET_GITHUB_USER } from '../actions';
+import { GET_GITHUB_USER_REPOS } from '../actions';
 
-const publicReposReducer = (
-  state = configuration.initialState.github.publicRepos, action
+const reposReducer = (
+  state = configuration.initialState.github.repos, action
 ) => {
   switch (action.type) {
-    case GET_GITHUB_USER:
-      return action.payload.user.publicRepos;
+    case GET_GITHUB_USER_REPOS:
+      return action.payload.repos.sort((a, b) => (a.name - b.name));
     default:
       return state;
   }
 };
 
 export const githubReducer = combineReducers({
-  publicRepos: publicReposReducer,
+  repos: reposReducer,
 });
