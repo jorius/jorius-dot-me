@@ -24,6 +24,7 @@ const GithubRepo = ({
     <Chip
       className={classes.languageTag}
       color="primary"
+      key={lang}
       label={lang}
     />
   ));

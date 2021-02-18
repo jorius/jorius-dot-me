@@ -1,4 +1,8 @@
 {
+  "aboutMe": {
+    "description": "A simple and friendly software developer, passionate about learning and growing frequently, I'm 24 years old, almost 90% that I know came from being a powerful self-taught person, I have diabetes since I was 10 years old, I know this is a profession wich have a sedentary lifestyle and that's why all of you reading this should work out, I am only son, I live in Medellín, Colombia, right now I'm a WebUI Semi Senior at Globant, I've been working as front-end developer 4 years ago but I would like to change to something that, maybe, has some 'real' matter and impact in our lives, something like the code that's being write by Google, Microsoft or Tesla.",
+    "name": "I am Jose Ríos C, "
+  },
   "common": {
     "changeLanguage": "Change language"
   },

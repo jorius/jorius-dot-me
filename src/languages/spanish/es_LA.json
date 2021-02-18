@@ -1,4 +1,8 @@
 {
+  "aboutMe": {
+    "description": "Soy un simple y amigable desarrollador de software, apasionado acerca de aprender y crecer frecuentemente, Tengo 24 años, casi el 90% de lo que sé viene de ser una persona empírica y autodidacta, tengo diabetes desde que tenía 10 años, Sé que esta es una profesión con estilo de vida sedentaria y es por eso que todos los que estén leyendo esto deberían hacer ejercicio, soy hijo único, vivo en Medellín, Colombia, actualmente soy WebUI Semi Senior en Globant, he trabajado como front-end desde hace 4 años pero me gustaría cambiar a algo que, quizá, tenga un valor o impocato 'real' en nuestras vidas, algo como el código que es escrito por Google, Microsoft o Tesla.",
+    "name": "Me llamo Jose Ríos C, "
+  },
   "common": {
     "changeLanguage": "Cambiar idioma"
   },
