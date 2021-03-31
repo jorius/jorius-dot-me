@@ -2,14 +2,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import {
-  Redirect,
   Route,
   Switch,
-  useLocation,
 } from 'react-router-dom';
-
-// @components
-import MainMenu from '../components/navigation/main-menu';
 
 // @configuration
 import { configuration } from './index';
@@ -18,15 +13,9 @@ import { configuration } from './index';
 import { mapComponent } from './mapper';
 
 const MainRoutes = () => {
-  const location = useLocation();
   const { languageCode } = useSelector((state) => state.settings);
-  const currentUri = location.pathname;
 
   configuration.applyLanguage(languageCode);
-
-  if (currentUri === '/') {
-    return <Redirect to="/home" />;
-  }
 
   const mapRoutes = () => configuration.routes.map((route, index) => (
     <Route
@@ -38,12 +27,9 @@ const MainRoutes = () => {
   ));
 
   return (
-    <>
-      <MainMenu />
-      <Switch>
-        {mapRoutes()}
-      </Switch>
-    </>
+    <Switch>
+      {mapRoutes()}
+    </Switch>
   );
 };
 

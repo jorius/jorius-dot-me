@@ -1,22 +1,25 @@
 {
   "aboutMe": {
-    "description": "Soy un simple y amigable desarrollador de software, apasionado acerca de aprender y crecer frecuentemente, Tengo 24 años, casi el 90% de lo que sé viene de ser una persona empírica y autodidacta, tengo diabetes desde que tenía 10 años, Sé que esta es una profesión con estilo de vida sedentaria y es por eso que todos los que estén leyendo esto deberían hacer ejercicio, soy hijo único, vivo en Medellín, Colombia, actualmente soy WebUI Semi Senior en Globant, he trabajado como front-end desde hace 4 años pero me gustaría cambiar a algo que, quizá, tenga un valor o impocato 'real' en nuestras vidas, algo como el código que es escrito por Google, Microsoft o Tesla.",
-    "name": "Me llamo Jose Ríos C, "
+    "caption": "(y mi gato Mantequillo).",
+    "description": "Soy un simple desarrollador de software queriendo aprender día a día cosas nuevas y queriendo cambiar el mundo, hice esta página como el inicio de un nuevo posible portafolio, para subir y mostrar pequeños proyectos y otro contenido útil para cualquier tipo de programador.",
+    "name": "Hola, soy Jose Ríos C, "
   },
   "common": {
-    "changeLanguage": "Cambiar idioma"
+    "changeLanguage": "Cambiar idioma",
+    "footer": "Esta página todavía está bajo desarrollo, por favor espere por actualizaciones importantes y nuevo contenido!"
+  },
+  "homePage": {
+    "githubTitle": "Algunos de mis repositorios",
+    "title": "Bienvenido a Jorius dot me, "
   },
   "languages": {
     "en_US": "Inglés",
     "es_LA": "Español"
   },
-  "mainMenu": {
-    "bioPage": "Acerca de Jorius",
-    "contactPage": "Susurrame algo",
-    "githubPage": "GitHub repositorios",
-    "homePage": "Cavo cañaveral",
-    "npmPage": "NPM paquetes",
-    "settingsPage": "Cambia algunas cosas",
-    "stackOverflowPage": "Stack Overflow perfil"
+  "notFoundPage": {
+    "title": "Error 404, Página no encontrada"
+  },
+  "settingsPage": {
+    "title": "Cambia algunas cosas"
   }
 }

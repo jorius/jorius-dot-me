@@ -13,19 +13,30 @@ import Typography from '@material-ui/core/Typography';
 import { useStyles } from './styles';
 
 const AboutMe = ({
+  avatar,
+  caption,
   description,
   name,
 }) => {
   const classes = useStyles();
 
   return (
-    <Grid className={classes.aboutMe}>
+    <Grid container className={classes.aboutMe}>
       <Card className={classes.aboutMeCard}>
-        <Grid container direction="row">
-          <Grid item lg={10} sm={10}>
+        <Grid
+          alignContent="space-between"
+          alignItems="center"
+          container
+          direction="row"
+          justify="center"
+        >
+          <Grid item lg={10} sm={9} xs={12}>
             <CardContent>
-              <Typography className={classes.title} variant="h5">
+              <Typography className={classes.title}>
                 {name}
+                <small>
+                  {caption}
+                </small>
               </Typography>
               <Typography color="textPrimary" variant="body1">
                 {description}
@@ -37,11 +48,12 @@ const AboutMe = ({
             className={classes.avatarContainer}
             item
             lg={2}
-            sm={2}
+            sm={3}
+            xs={12}
           >
             <CardMedia
               className={classes.avatar}
-              image="https://avatars.githubusercontent.com/u/9467990?s=460&u=54508dd79ef1d321e2e62904e93c6d1e69dc80cd&v=4static/images/cards/live-from-space.jpg"
+              image={avatar}
               title="avatar"
             />
           </Grid>
@@ -52,6 +64,8 @@ const AboutMe = ({
 };
 
 AboutMe.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  caption: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };

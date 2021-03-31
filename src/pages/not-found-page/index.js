@@ -14,7 +14,7 @@ const NotFoundPage = () => (
     justify="center"
   >
     <Typography variant="h4">
-      {configuration.language.mainMenu.notFoundPage}
+      {configuration.language.notFoundPage.title}
     </Typography>
   </Grid>
 );

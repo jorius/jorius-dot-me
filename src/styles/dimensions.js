@@ -1,6 +1,2 @@
 // @constants
-export const dimensions = {
-  mainMenu: {
-    width: 350,
-  },
-};
+export const dimensions = {};

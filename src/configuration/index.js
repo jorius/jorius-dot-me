@@ -7,7 +7,7 @@ import { addHttpInterceptors } from '../core/http-interceptors';
 import languages from '../languages';
 
 // @menus
-import mainMenu from './menus/main-menu.json';
+import mainAppRoutes from './routes/main-routes.json';
 
 // @services
 import github from './services/github.json';
@@ -30,13 +30,6 @@ function applyLanguage(languageCode) {
     label: config.language.languages[language],
     languageCode: language,
   }));
-
-  const buildMenu = (menu) => menu.map((menuItem) => ({
-    ...menuItem,
-    label: config.language.mainMenu[menuItem.name],
-  }));
-
-  config.mainMenu = buildMenu(mainMenu);
 }
 
 const buildRoutes = (routes) => routes.map((route) => ({
@@ -60,7 +53,7 @@ const getConfiguration = () => {
     return global.config;
   }
 
-  const mainRoutes = buildRoutes(mainMenu);
+  const mainRoutes = buildRoutes(mainAppRoutes);
   const services = buildServices({ github });
 
   addHttpInterceptors();

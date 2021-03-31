@@ -1,7 +1,19 @@
 // @packages
-import React from 'react';
+import React, { useEffect } from 'react';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import { useDispatch, useSelector } from 'react-redux';
+
+// @actions
+import { getGithubUserRepos, setLanguageCode } from '../../store';
+
+// @images
+import avatar from '../../assets/img/avatar.jpg';
+
+// @components
+import AboutMe from '../../components/commons/about-me';
+import GithubRepo from '../../components/commons/github-repo';
 
 // @configuration
 import { configuration } from '../../configuration';
@@ -11,6 +23,13 @@ import { useStyles } from './styles';
 
 const HomePage = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  const { repos } = useSelector((state) => state.github);
+
+  useEffect(() => {
+    dispatch(getGithubUserRepos(process.env.REACT_APP_GITHUB_USERNAME));
+  }, []);
 
   return (
     <Grid
@@ -18,9 +37,51 @@ const HomePage = () => {
       container
       justify="center"
     >
-      <Typography variant="h4">
-        {configuration.language.mainMenu.homePage}
+      <Typography className={classes.homePageTitle}>
+        {configuration.language.homePage.title}
       </Typography>
+      <Grid className={classes.homePageLanguages}>
+        <Button
+          className={classes.languageButton}
+          color="primary"
+          onClick={() => { dispatch(setLanguageCode('es_LA')); }}
+          size="small"
+        >
+          {configuration.language.languages.es_LA}
+        </Button>
+        |
+        <Button
+          className={classes.languageButton}
+          color="secondary"
+          onClick={() => { dispatch(setLanguageCode('en_US')); }}
+          size="small"
+        >
+          {configuration.language.languages.en_US}
+        </Button>
+      </Grid>
+      <Grid className={classes.aboutMe} container direction="column">
+        <AboutMe
+          avatar={avatar}
+          caption={configuration.language.aboutMe.caption}
+          description={configuration.language.aboutMe.description}
+          name={configuration.language.aboutMe.name}
+        />
+      </Grid>
+      <Typography className={classes.githubTitle}>
+        {configuration.language.homePage.githubTitle}
+      </Typography>
+      <Grid>
+        {repos.length && repos.map((repo) => (
+          <Grid key={repo.id} item>
+            <GithubRepo {...repo} />
+          </Grid>
+        ))}
+      </Grid>
+      <Grid className={classes.footer}>
+        <Typography variant="caption">
+          {configuration.language.common.footer}
+        </Typography>
+      </Grid>
     </Grid>
   );
 };

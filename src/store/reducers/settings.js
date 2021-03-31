@@ -5,18 +5,7 @@ import { combineReducers } from 'redux';
 import { configuration } from '../../configuration';
 
 // @actions
-import { SET_LANGUAGE_CODE, SET_MENU_VISIBILITY } from '../actions';
-
-const isMenuOpenReducer = (
-  state = configuration.initialState.settings.isMenuOpen, action
-) => {
-  switch (action.type) {
-    case SET_MENU_VISIBILITY:
-      return action.payload.visibility;
-    default:
-      return state;
-  }
-};
+import { SET_LANGUAGE_CODE } from '../actions';
 
 const languageCodeReducer = (
   state = configuration.initialState.settings.languageCode, action
@@ -30,6 +19,5 @@ const languageCodeReducer = (
 };
 
 export const settingsReducer = combineReducers({
-  isMenuOpen: isMenuOpenReducer,
   languageCode: languageCodeReducer,
 });

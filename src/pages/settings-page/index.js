@@ -32,7 +32,7 @@ const SettingsPage = () => {
     >
       <Grid item>
         <Typography variant="h4">
-          {configuration.language.mainMenu.settingsPage}
+          {configuration.language.settingsPage.title}
         </Typography>
         <TextField
           className={classes.textField}
