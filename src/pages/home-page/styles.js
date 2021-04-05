@@ -16,12 +16,16 @@ const responsiveTitleStyles = (theme) => ({
 
 export const useStyles = makeStyles((theme) => ({
   aboutMe: {
-    marginTop: 25,
     marginBottom: 25,
+    marginTop: 25,
   },
   footer: {
+    '&>p>a': {
+      color: theme.palette.custom.yellow.dark,
+    },
+    color: theme.palette.custom.yellow.main,
     marginTop: 100,
-    color: theme.palette.custom.yellow.dark,
+    textAlign: 'center',
   },
   githubTitle: {
     ...responsiveTitleStyles(theme),

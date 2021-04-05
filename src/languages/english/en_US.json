@@ -1,7 +1,7 @@
 {
   "aboutMe": {
     "caption": "(and my cat Mantequillo).",
-    "description": "I'm a simple software developer wanting to learn day to day new stuff and wanting to change the world, I made this web as the start for a possible new portfolio, to upload and to show little proyects and other useful content for any kind of developer.",
+    "description": "I am a software developer with a little more than 5 years of experience wanting to continue learning a little bit of everything every day and wanting to continue specializing in the expertise that I already have, in one way or another, like everyone else on the planet, wanting to change the world, I made this page as the beginning of a portfolio where to upload, show and share small projects and other useful content for any type of programmer.",
     "name": "Hi, I am Jose Ríos C, "
   },
   "common": {
@@ -17,7 +17,7 @@
     "es_LA": "Spanish"
   },
   "notFoundPage": {
-    "title": "Error 404, Page not found"
+    "title": "Error 404, Page not found."
   },
   "settingsPage": {
     "title": "Change it some stuff"

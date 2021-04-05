@@ -1,12 +1,12 @@
 {
   "aboutMe": {
     "caption": "(y mi gato Mantequillo).",
-    "description": "Soy un simple desarrollador de software queriendo aprender día a día cosas nuevas y queriendo cambiar el mundo, hice esta página como el inicio de un nuevo posible portafolio, para subir y mostrar pequeños proyectos y otro contenido útil para cualquier tipo de programador.",
+    "description": "Soy un desarrollador de software con un poco más de 5 años de experiencia queriendo seguir aprendiendo día a día de todo un poco y queriendo seguir especializandome en las experticias que ya poseo, de una u otra manera, como todos en el planeta, queriendo cambiar el mundo, hice esta página como el inicio de un portafolio donde subir, mostrar y compartir pequeños proyectos y otro contenido útil para cualquier tipo de programador.",
     "name": "Hola, soy Jose Ríos C, "
   },
   "common": {
     "changeLanguage": "Cambiar idioma",
-    "footer": "Esta página todavía está bajo desarrollo, por favor espere por actualizaciones importantes y nuevo contenido!"
+    "footer": "Esta página todavía está bajo desarrollo y construcción, por favor espere por actualizaciones grandes y nuevo contenido!"
   },
   "homePage": {
     "githubTitle": "Algunos de mis repositorios",
@@ -17,7 +17,7 @@
     "es_LA": "Español"
   },
   "notFoundPage": {
-    "title": "Error 404, Página no encontrada"
+    "title": "Error 404, Página no encontrada."
   },
   "settingsPage": {
     "title": "Cambia algunas cosas"

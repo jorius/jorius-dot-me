@@ -85,6 +85,9 @@ export const materialCustomTheme = createMuiTheme({
     primary: {
       ...customPalette.blue,
     },
+    secondary: {
+      ...customPalette.yellow,
+    },
   },
   typography: {
     fontFamily: [

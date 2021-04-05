@@ -1,6 +1,6 @@
 {
   "name": "jorius-dot-me",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",
@@ -23,6 +23,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "sass": "^1.32.7",
+    "styled-components": "^5.2.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -30,7 +31,7 @@
     "eject": "react-scripts eject",
     "start": "run-p watch-css start-js",
     "start-js": "react-scripts start",
-    "test": "react-scripts test",
+    "test": "react-scripts test --ci --watchAll=false",
     "watch-css": "sass --watch ./src/styles/site.scss ./src/assets/css/site.css"
   },
   "eslintConfig": {
@@ -52,6 +53,8 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^7.20.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
