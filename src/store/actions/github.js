@@ -28,10 +28,9 @@ export const getGithubUserRepos = (userName) => (dispatch) =>
         };
       });
 
-      setTimeout(() =>
-        Promise.all(repositories).then((repos) => dispatch({
-          payload: { repos },
-          type: GET_GITHUB_USER_REPOS,
-        })), 2450);
+      Promise.all(repositories).then((repos) => dispatch({
+        payload: { repos },
+        type: GET_GITHUB_USER_REPOS,
+      }));
     })
     .catch(Promise.reject);
