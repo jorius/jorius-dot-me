@@ -1,6 +1,6 @@
 {
   "name": "jorius-dot-me",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",
@@ -27,7 +27,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "build": "react-scripts build",
+    "build": "run-p build-css build-js",
+    "build-css": "sass ./src/styles/site.scss ./src/assets/css/site.css",
+    "build-js": "react-scripts build",
     "eject": "react-scripts eject",
     "start": "run-p watch-css start-js",
     "start-js": "react-scripts start",
