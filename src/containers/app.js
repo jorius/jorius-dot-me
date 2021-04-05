@@ -9,13 +9,13 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import MainRoutes from '../configuration/routes';
 
 // @store
-import { reduxStore } from '../store';
+import { store } from '../core';
 
 // @theme
 import { materialCustomTheme } from '../styles';
 
 const AppContainer = () => (
-  <Provider store={reduxStore}>
+  <Provider store={store}>
     <ThemeProvider theme={materialCustomTheme}>
       <CssBaseline />
       <BrowserRouter>

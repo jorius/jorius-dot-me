@@ -69,7 +69,9 @@ const HomePage = () => {
         />
       </Grid>
       <Typography className={classes.githubTitle}>
-        {configuration.language.homePage.githubTitle}
+        {repos.length
+          ? configuration.language.homePage.githubTitle
+          : null}
       </Typography>
       <Grid>
         {repos.length

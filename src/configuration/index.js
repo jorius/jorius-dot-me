@@ -1,8 +1,5 @@
 /* eslint-disable camelcase */
 
-// @http
-import { addHttpInterceptors } from '../core/http-interceptors';
-
 // @languages
 import languages from '../languages';
 
@@ -55,8 +52,6 @@ const getConfiguration = () => {
 
   const mainRoutes = buildRoutes(mainAppRoutes);
   const services = buildServices({ github });
-
-  addHttpInterceptors();
 
   const config = {
     applyLanguage,

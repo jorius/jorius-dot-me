@@ -39,6 +39,9 @@
       "consistent"
     ],
     "implicit-arrow-linebreak": "off",
+    "import/no-cycle": [2, {
+      "maxDepth": 1
+    }],
     "import/prefer-default-export": 0,
     "indent": [
       "error",

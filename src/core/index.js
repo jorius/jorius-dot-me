@@ -1,3 +1,6 @@
+// @http
+import { addHttpInterceptors } from './http-interceptors';
+
 // @store
 import { reduxStore } from '../store';
 
@@ -7,11 +10,13 @@ const getCore = () => {
   }
 
   const core = {
-    reduxStore,
+    store: reduxStore,
   };
 
+  addHttpInterceptors({ store: core.store });
+
   global.core = core;
-  return core;
+  return global.core;
 };
 
-export const core = getCore();
+export const { store } = getCore();
