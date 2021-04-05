@@ -13,9 +13,9 @@ describe('HomePage component tests suite', () => {
   const useSelectorSpy = jest.spyOn(redux, 'useSelector');
 
   beforeAll(() => {
-    useDispatchSpy.mockImplementation((fn) => fn());
+    useDispatchSpy.mockImplementation(jest.fn());
     useEffectSpy.mockImplementation((fn) => fn());
-    useSelectorSpy.mockImplementationOnce((selectorFn) => selectorFn({ github: [] }));
+    useSelectorSpy.mockImplementationOnce((selectorFn) => selectorFn({ github: { repos: [] } }));
 
     wrapper = <HomePage />;
   });

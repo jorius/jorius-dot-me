@@ -39,6 +39,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     backgroundColor: theme.palette.custom.black.dark,
     color: theme.palette.custom.white.light,
+    height: (props) => `${!props.repos ? '100vh' : 'auto'}`,
     padding: 25,
     width: '100%',
   },

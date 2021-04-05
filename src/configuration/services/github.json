@@ -1,4 +1,3 @@
 {
-  "repos": "{root}/users/{0}/repos",
-  "user": "{root}/user/{0}"
+  "repos": "{root}/users/{0}/repos"
 }
