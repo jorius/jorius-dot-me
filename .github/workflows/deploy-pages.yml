@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # Refresh the repository snapshot once a day so new repositories show up without a commit.
+  schedule:
+    - cron: '17 6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -26,6 +29,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '16'
+
+      # The browser used to call the GitHub API on every visit and hit the 60-per-hour
+      # unauthenticated limit. The list is fetched here with the workflow token instead
+      # and shipped as a static file; nothing secret reaches the bundle.
+      - name: Snapshot the public repositories
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api 'users/jorius/repos?per_page=100&sort=updated' \
+            --jq '[.[] | select(.fork | not) | select(.archived | not) | {id, name, description, html_url, default_branch, language}]' \
+            > public/repos.json
+          node -e "const r=require('./public/repos.json'); if(!Array.isArray(r)||r.length<5) process.exit(1); console.log(r.length,'repositories')"
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile

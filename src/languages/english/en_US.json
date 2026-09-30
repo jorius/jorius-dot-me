@@ -11,7 +11,7 @@
   "homePage": {
     "githubTitle": "Some of my repositories",
     "title": "Welcome to Jorius dot me, ",
-    "githubUnavailable": "GitHub's public API limit for your network is used up for now; the repositories will show again within the hour."
+    "githubUnavailable": "The repository list could not be loaded right now."
   },
   "languages": {
     "en_US": "English",

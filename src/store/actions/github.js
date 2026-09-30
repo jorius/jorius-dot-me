@@ -1,22 +1,15 @@
 // @packages
 import axios from 'axios';
 
-// @core
-import { configuration } from '../../configuration';
-
-// @utils
-import { parseStringParams } from '../../utils';
-
 // @constants
 export const GET_GITHUB_USER_REPOS = 'GET_GITHUB_USER_REPOS';
 export const GET_GITHUB_USER_REPOS_FAILED = 'GET_GITHUB_USER_REPOS_FAILED';
 
-// One request per page view. The repository list already carries each
-// repository's primary language; the old per-repository languages calls cost
-// one request each against GitHub's 60-per-hour unauthenticated budget, so a
-// handful of visits from one network emptied it and the list came back blank.
-export const getGithubUserRepos = (userName) => (dispatch) =>
-  axios.get(parseStringParams(configuration.services.github.repos, userName))
+// The list is a static snapshot written by the deploy workflow (public/repos.json),
+// so a page view makes no GitHub API call at all: the unauthenticated limit of 60
+// requests per hour per network used to blank the list after a few visits.
+export const getGithubUserRepos = () => (dispatch) =>
+  axios.get(`${process.env.PUBLIC_URL}/repos.json`)
     .then((response) => {
       const repos = response.map((repo) => ({
         defaultBranch: repo.default_branch,
