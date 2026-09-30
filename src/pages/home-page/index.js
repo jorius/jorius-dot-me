@@ -24,7 +24,7 @@ import { useStyles } from './styles';
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  const { repos } = useSelector((state) => state.github);
+  const { error, repos } = useSelector((state) => state.github);
 
   const classes = useStyles({ repos: Boolean(repos.length) });
 
@@ -71,6 +71,9 @@ const HomePage = () => {
       <Typography className={classes.githubTitle}>
         {repos.length
           ? configuration.language.homePage.githubTitle
+          : null}
+        {error
+          ? configuration.language.homePage.githubUnavailable
           : null}
       </Typography>
       <Grid>

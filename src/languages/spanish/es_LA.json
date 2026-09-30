@@ -10,7 +10,8 @@
   },
   "homePage": {
     "githubTitle": "Algunos de mis repositorios",
-    "title": "Bienvenido a Jorius dot me, "
+    "title": "Bienvenido a Jorius dot me, ",
+    "githubUnavailable": "El límite de la API pública de GitHub para tu red se agotó por ahora; los repositorios volverán a verse dentro de una hora."
   },
   "languages": {
     "en_US": "Inglés",
