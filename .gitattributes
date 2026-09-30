@@ -1,1 +1,13 @@
 * eol=crlf
+
+# Never convert line endings inside binaries: the eol rule above corrupted the avatar and favicon on every checkout.
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.pdf binary
