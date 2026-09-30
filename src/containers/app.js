@@ -18,7 +18,7 @@ const AppContainer = () => (
   <Provider store={store}>
     <ThemeProvider theme={materialCustomTheme}>
       <CssBaseline />
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <MainRoutes />
       </BrowserRouter>
     </ThemeProvider>
